@@ -1,0 +1,43 @@
+<%= form_for(@course) do |f| %>
+  <% if @course.errors.any? %>
+    <h2>Error:</h2>
+    <ul>
+      <% @course.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label :course %><br>
+    <%= f.text_field :course,:placeholder => "CN320" %>
+  </div>
+  <div class="field">
+    <%= f.label :coursename %><br>
+    <%= f.text_field :coursename ,:placeholder => "Software Engineering" %>
+  </div>
+  <div class="field">
+    <%= f.label :lecturer %><br>
+    <%= f.text_field :lecturer,:placeholder => "Dr.Phisan Kaewprapa" %>
+  </div>
+  <div class="field">
+    <%= f.label :semester %><br>
+    <%= f.number_field :semester,:placeholder => "1" %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year,:placeholder => "2557" %>
+  </div>
+  <div class="field">
+    <%= f.label :room %><br>
+    <%= f.text_field :room,:placeholder => "ENGR-316" %>
+  </div>
+  <div class="field">
+    <%= f.label :examdate %><br>
+    <%= f.text_field :examdate,:placeholder => "20 พฤษภาคม 2558" %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Submit' %>
+  </div>
+<% end %>

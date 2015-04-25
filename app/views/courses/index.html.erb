@@ -1,0 +1,39 @@
+<h1>Courses</h1>
+<div class="media">
+  <div class="media-body">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Course</th>
+      <th>Coursename</th>
+      <th>Lecturer</th>
+      <th>Semester</th>
+      <th>Year</th>
+      <th>Room</th>
+      <th>Examdate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <td><%= course.course %></td>
+        <td><%= course.coursename %></td>
+        <td><%= course.lecturer %></td>
+        <td><%= course.semester %></td>
+        <td><%= course.year %></td>
+        <td><%= course.room %></td>
+        <td><%= course.examdate %></td>
+        <td><%= link_to 'Show', course, class: 'btn btn-mini btn-warning' %></td>
+        <td><%= link_to 'Edit', edit_course_path(course), class: 'btn btn-mini btn-success' %></td>
+        <td><%= link_to 'Delete', course, method: :delete, class: 'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' },:id => "#{course.course}" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  </div>
+</div>
+<br>
+
+<%= link_to 'New Course', new_course_path %>

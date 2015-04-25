@@ -1,0 +1,30 @@
+<%= form_for(@lecturer) do |f| %>
+  <% if @lecturer.errors.any? %>
+    <h2>Error:</h2>
+    <ul>
+      <% @lecturer.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :identificationnumber %><br>
+    <%= f.number_field :identificationnumber,:placeholder => "1" %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name,:placeholder => "Dr.Phisan Kaewprapa" %>
+  </div>
+  <div class="field">
+    <%= f.label :faculty %><br>
+    <%= f.text_field :faculty,:placeholder => "Engineering" %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br>
+    <%= f.text_field :department,:placeholder => "Computer" %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Submit' %>
+  </div>
+<% end %>

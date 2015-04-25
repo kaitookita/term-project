@@ -1,0 +1,34 @@
+<h1>Lecturers</h1>
+
+<div class="media">
+  <div class="media-body">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Faculty</th>
+      <th>Department</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lecturers.each do |lecturer| %>
+      <tr>
+        <td><%= lecturer.identificationnumber %></td>
+        <td><%= lecturer.name %></td>
+        <td><%= lecturer.faculty %></td>
+        <td><%= lecturer.department %></td>
+        <td><%= link_to 'Show', lecturer, class: 'btn btn-mini btn-warning' %></td>
+        <td><%= link_to 'Edit', edit_lecturer_path(lecturer), class: 'btn btn-mini btn-success' %></td>
+        <td><%= link_to 'Delete', lecturer, method: :delete , class: 'btn btn-mini btn-danger', data: { confirm: 'Are you sure?' },:id => "#{lecturer.name}" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  </div>
+</div>
+<br>
+
+<%= link_to 'New Lecturer', new_lecturer_path %>
