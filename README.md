@@ -1,4 +1,6 @@
-https://quiet-hollows-8052.herokuapp.com/lecturers
+https://secure-savannah-8352.herokuapp.com/
+
+Heroku Updated at 25-04-2015 22:24
 
 == README
 
