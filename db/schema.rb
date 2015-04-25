@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20150324072657) do
     t.integer  "year"
     t.string   "room"
     t.string   "examdate"
-    t.string   "moreinfo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,7 +30,6 @@ ActiveRecord::Schema.define(version: 20150324072657) do
     t.string   "name"
     t.string   "faculty"
     t.string   "department"
-    t.string   "moreinfo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
