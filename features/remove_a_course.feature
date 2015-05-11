@@ -20,12 +20,6 @@ Background: Course has been added to database
 
 Scenario: Remove course succesfully (happy path)
     When I am on the course index page
-    When I follow "CN320"
+    When I follow "CN320" to delete
     Then I should be on the course index page
     And I should not see "CN320"
-
-#Scenario: Remove course unsuccesfully (sad path)
-#    Given I am on the course index page
-#    When I follow "CN434"
-#    Then I should be on the course index page
-#    And I should see "Delete Unsuccessful"

@@ -16,12 +16,7 @@ Given the following lecturer exist
 
 Scenario: Remove lecturer succesfully (happy path)
     Given I am on the lecturer index page
-    Then I follow "Weerachai Anotaipaiboon"
+    When I follow "Weerachai Anotaipaiboon" to delete
     Then I should be on the lecturer index page
     And I should not see "Weerachai Anotaipaiboon"
 
-#Scenario: Remove lecturer unsuccesfully (sad path)
-#    Given I am on the lecturer index page
-#    Then I follow "Taweesak Kijkanjanarat"
-#    Then I should be on the lecturer index page
-#    And I should see "Delete Unsuccessful"
